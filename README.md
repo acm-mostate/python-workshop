@@ -1,2 +1,1 @@
 # python-workshop
-Python Workshop
