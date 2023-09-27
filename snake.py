@@ -18,7 +18,7 @@ CELL_SIZE = 20
 
 # Screen setup
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption('Simple Snake Game with Score')
+pygame.display.set_caption("Snake Game")
 clock = pygame.time.Clock()
 
 def start_screen():
@@ -106,7 +106,7 @@ def main():
 
         head = snake[0]
         print(snake)
-        new_head = ((head[0] + direction[0]) , (head[1] + direction[1]) )
+        new_head = ((head[0] + direction[0]) % (WIDTH//CELL_SIZE), (head[1] + direction[1]) % (HEIGHT//CELL_SIZE) )
         
         snake.insert(0, new_head)
         if new_head == food:
